@@ -128,14 +128,159 @@ section{
 .about .title::before{
     content: "";
     position: absolute;
+    bottom:0px;
+    left:50%;
     width:180px;
     height: 3px;
     background: black;
+    transform: translateX(-50%);
 }
+.about .title::after{
+    content: "who I am";
+    position: absolute;
+    bottom:-12px;
+    font-size: 20px;
+    color:rgb(130, 128, 128);
+    left:50%;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.about .about-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+}
  .about .about-content .left img{
     height: 540px;
-    width: 80%;
+    width: 150%;
     object-fit: cover;
-
+   border-radius: 10px;
+   margin-top: -40%;
+   margin-left: -80%;
+}
+.about .about-content .left{
+width: 45%;
 } 
+.about .about-content .right{
+width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+  color:rgb(97, 97, 97);
+}
+.about .about-content .right p{
+    text-align: justify;
+  }
+  .about .about-content .right a{
+    display: inline-block;
+    background: rgb(97, 97, 97);
+    color: black;
+    font-size: 15px;
+    padding: 10px 30px;
+    font-weight: 500;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(97, 97, 97);
+    transition: all 0.3s ease;
+  }
+  .about .about-content .right a:hover{
+    color:rgb(97, 97, 97);
+    background: none;
+  }
+
+
+.content {
+    width:60%;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+#projectdiv div>div:nth-child(3)>p {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: rgb(77, 76, 76);
+    font-family: 'Ubuntu','sans-serif';  
+}
+
+#projectdiv img {
+    width: 185%;
+    height: 500px;
+    margin-left: -90%;
+}
+
+.opbox>div:nth-child(1) {
+    grid-area: A;
+}
+
+.opbox>div:nth-child(2) {
+    grid-area: B;
+}
+
+.opbox {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "A B";
+    gap: 10px;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: 'Ubuntu','sans-serif';  
+    margin-bottom: 10px;
+}
+.opbox h3{
+    font-family: 'Ubuntu','sans-serif'; 
+    font-size: 16px; 
+    margin-top: 15px;
+}
+
+@media all and (min-width:100px) and (max-width:767px) {
+    .opbox img {
+        width: 200px;
+        height: 100px;
+    }
+    .opbox {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: "A" "B" "C" "D";
+        gap: 20px;
+    }
+    .linksproject div {
+        width: 100px;
+        height: 30px;
+    }
+}
+
+.linksproject {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.linksproject div {
+    margin-top: 15px;
+    width: 160px;
+    height: 30px;
+    background-color: rgb(71, 69, 89);
+    border-radius: 60px;
+    padding-top: 5px;
+}
+
+.linksproject div p {
+    color: #f0f0f0;
+    font-family: 'Ubuntu','sans-serif';  
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: -5%;
+    margin-bottom: -4%;
+    font-family: 'Ubuntu','sans-serif';  
+}
